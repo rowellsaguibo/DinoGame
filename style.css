@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#canvas {
+  background-image: url('/assets/desert.png');
+  background-size: cover;
+  background-position: center;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  top: 10px;
+  left: 100px;
+  border: 1px solid black;
+  overflow-y: hidden;
+}
+
+#dino {
+  background-image: url('./assets/dino.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 80px;
+  height: 100px;
+  position: relative;
+  top: 300px;
+}
+
+.motion {
+  animation: jump 500ms;
+}
+
+@keyframes jump {
+  0% {
+    top: 300px;
+  }
+  50% {
+    top: 170px;
+  }
+  100% {
+    top: 300px;
+  }
+}
+
+#cactus {
+  background-image: url('./assets/cactus.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 80px;
+  height: 100px;
+  position: relative;
+  top: 200px;
+  left: 450px;
+  animation: move 1.5s infinite linear;
+}
+
+/* Move Cactus */
+@keyframes move {
+  0% {
+    left: 450px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+
+/* button */
+#btn {
+  position: relative;
+  top: 30px;
+  left: 300px;
+  padding: 30px 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+#score {
+  margin-left: 60px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
